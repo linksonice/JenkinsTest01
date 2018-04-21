@@ -1,3 +1,35 @@
+// Declarative //
+pipline {
+	agent any
+	
+	stages {
+		stage('Build') {
+			steps {
+				echo 'Building..'
+			}
+		}
+		stage('Test') {
+			steps {
+				echo 'Testing..'
+			}
+		stage('Deploy'){
+			steps {
+				echo 'Deploying.....'
+			}
+		}
+	}
+}
+
+// Script //
+
 node {
-	echo "Hello World"
+	stage('Build') {
+		echo 'Building....'
+	}
+	stage('Test') {
+		echo 'Testing....'
+	}
+	stage('Deploy') {
+		echo 'Deploying....'
+	}
 }
